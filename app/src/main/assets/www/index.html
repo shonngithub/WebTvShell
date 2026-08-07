@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>WebTvShell 配置</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>WebTvShell</h1>
+      <p id="connection-label">正在连接盒子...</p>
+    </div>
+    <div class="top-actions">
+      <span id="dirty-badge" class="badge hidden">有未保存修改</span>
+      <button id="save-draft" type="button" class="secondary">保存草稿</button>
+      <button id="apply-config" type="button" class="primary">校验并应用</button>
+    </div>
+  </header>
+
+  <div class="shell">
+    <nav class="nav" aria-label="配置功能">
+      <button class="nav-item active" data-view="status" type="button">状态</button>
+      <button class="nav-item" data-view="channels" type="button">频道</button>
+      <button class="nav-item" data-view="profiles" type="button">站点规则</button>
+      <button class="nav-item" data-view="scripts" type="button">高级脚本</button>
+      <button class="nav-item" data-view="tools" type="button">测试与维护</button>
+    </nav>
+
+    <main class="content">
+      <section id="view-status" class="view active">
+        <div class="section-heading">
+          <div><h2>运行状态</h2><p>盒子与当前生效配置概况</p></div>
+          <button id="refresh-all" class="secondary" type="button">刷新</button>
+        </div>
+        <dl id="status-grid" class="status-grid">
+          <div><dt>服务状态</dt><dd>读取中</dd></div>
+        </dl>
+        <div class="notice">
+          配置服务仅用于可信局域网。应用配置成功后，盒子上的 App 将自动重启并加载新配置。
+        </div>
+      </section>
+
+      <section id="view-channels" class="view">
+        <div class="section-heading">
+          <div><h2>频道与分组</h2><p>频道按分组分段显示，频道排序仅在所属分组内生效</p></div>
+          <div class="button-row">
+            <button id="add-group" class="secondary" type="button">新增分组</button>
+            <button id="add-channel" class="primary" type="button">新增频道</button>
+          </div>
+        </div>
+        <div class="split-list">
+          <section class="list-pane" aria-label="分组">
+            <h3>分组</h3>
+            <div id="group-list" class="entity-list"></div>
+          </section>
+          <section class="list-pane grow" aria-label="频道">
+            <h3>频道</h3>
+            <div id="channel-list" class="entity-list"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="view-profiles" class="view">
+        <div class="section-heading">
+          <div><h2>站点规则</h2><p>用域名和路径匹配网站，并定义自动播放与全屏方式</p></div>
+          <button id="add-profile" class="primary" type="button">新增规则</button>
+        </div>
+        <div id="profile-list" class="entity-list"></div>
+      </section>
+
+      <section id="view-scripts" class="view">
+        <div class="section-heading">
+          <div><h2>高级脚本</h2><p>仅在声明的域名运行；普通全屏优先使用站点规则</p></div>
+          <button id="add-script" class="primary" type="button">新增脚本</button>
+        </div>
+        <div class="warning">脚本会在远程网页内执行。应限制域名、保持幂等，并设置较短超时。</div>
+        <div id="script-list" class="entity-list"></div>
+      </section>
+
+      <section id="view-tools" class="view">
+        <div class="section-heading"><div><h2>测试与维护</h2><p>检查规则匹配，导入导出配置并管理历史版本</p></div></div>
+
+        <section class="tool-section">
+          <h3>规则匹配测试</h3>
+          <form id="match-form" class="inline-form">
+            <label class="grow"><span>网页 URL</span><input id="match-url" type="url" placeholder="https://example.com/live" required></label>
+            <button class="secondary" type="submit">测试匹配</button>
+          </form>
+          <pre id="match-result" class="result-box">尚未测试</pre>
+        </section>
+
+        <section class="tool-section">
+          <div class="section-heading compact">
+            <div><h3>JSON 配置</h3><p>可导出备份，或粘贴完整 JSON 后导入为草稿</p></div>
+            <div class="button-row">
+              <button id="export-config" class="secondary" type="button">导出当前配置</button>
+              <button id="import-config" class="secondary" type="button">导入为草稿</button>
+              <button id="validate-json" class="secondary" type="button">校验编辑内容</button>
+            </div>
+          </div>
+          <textarea id="json-editor" class="json-editor" spellcheck="false" aria-label="JSON 配置"></textarea>
+          <div id="validation-result" class="validation-result muted">尚未校验</div>
+        </section>
+
+        <section class="tool-section">
+          <div class="section-heading compact">
+            <div><h3>历史版本</h3><p>回滚成功后 App 也会自动重启</p></div>
+            <button id="refresh-history" class="secondary" type="button">刷新历史</button>
+          </div>
+          <div id="history-list" class="history-list"></div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-panel">
+      <div class="modal-heading"><h2 id="modal-title"></h2><button id="modal-close" class="text-button" type="button">关闭</button></div>
+      <form id="modal-form"></form>
+    </div>
+  </div>
+
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>

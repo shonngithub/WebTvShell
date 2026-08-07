@@ -1,0 +1,856 @@
+{
+  "schemaVersion": 1,
+  "configVersion": 1,
+  "updatedAt": "2026-08-06T00:00:00Z",
+  "groups": [
+    {
+      "id": "cctv",
+      "name": "央视直播",
+      "order": 0,
+      "enabled": true
+    },
+    {
+      "id": "satellite",
+      "name": "卫视频道",
+      "order": 50,
+      "enabled": true
+    },
+    {
+      "id": "satellite-external",
+      "name": "其他站源",
+      "order": 75,
+      "enabled": true
+    },
+    {
+      "id": "test",
+      "name": "测试",
+      "order": 100,
+      "enabled": true
+    }
+  ],
+  "channels": [
+    {
+      "id": "cctv-index",
+      "name": "央视直播大全",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 0,
+      "enabled": true,
+      "sources": [
+        {
+          "id": "cctv-index-source",
+          "url": "https://tv.cctv.com/live/index.shtml?spm=C28340.PdNvWY0LYxCP.ExZVtb8wXWPT.1",
+          "profileId": "cctv-live-profile",
+          "priority": 100,
+          "timeoutMs": 20000,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "cctv1",
+      "name": "CCTV-1 综合",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 1,
+      "enabled": true,
+      "sources": [{"id": "cctv1-source", "url": "https://tv.cctv.com/live/cctv1/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv2",
+      "name": "CCTV-2 财经",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 2,
+      "enabled": true,
+      "sources": [{"id": "cctv2-source", "url": "https://tv.cctv.com/live/cctv2/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv3",
+      "name": "CCTV-3 综艺",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 3,
+      "enabled": true,
+      "sources": [{"id": "cctv3-source", "url": "https://tv.cctv.com/live/cctv3/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv4",
+      "name": "CCTV-4 中文国际",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 4,
+      "enabled": true,
+      "sources": [{"id": "cctv4-source", "url": "https://tv.cctv.com/live/cctv4/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv5",
+      "name": "CCTV-5 体育",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 5,
+      "enabled": true,
+      "sources": [{"id": "cctv5-source", "url": "https://tv.cctv.com/live/cctv5/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv5plus",
+      "name": "CCTV-5+ 体育赛事",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 6,
+      "enabled": true,
+      "sources": [{"id": "cctv5plus-source", "url": "https://tv.cctv.com/live/cctv5plus/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv6",
+      "name": "CCTV-6 电影",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 7,
+      "enabled": true,
+      "sources": [{"id": "cctv6-source", "url": "https://tv.cctv.com/live/cctv6/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv7",
+      "name": "CCTV-7 国防军事",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 8,
+      "enabled": true,
+      "sources": [{"id": "cctv7-source", "url": "https://tv.cctv.com/live/cctv7/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv8",
+      "name": "CCTV-8 电视剧",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 9,
+      "enabled": true,
+      "sources": [{"id": "cctv8-source", "url": "https://tv.cctv.com/live/cctv8/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctvjilu",
+      "name": "CCTV-9 纪录",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 10,
+      "enabled": true,
+      "sources": [{"id": "cctvjilu-source", "url": "https://tv.cctv.com/live/cctvjilu/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv10",
+      "name": "CCTV-10 科教",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 11,
+      "enabled": true,
+      "sources": [{"id": "cctv10-source", "url": "https://tv.cctv.com/live/cctv10/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv11",
+      "name": "CCTV-11 戏曲",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 12,
+      "enabled": true,
+      "sources": [{"id": "cctv11-source", "url": "https://tv.cctv.com/live/cctv11/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv12",
+      "name": "CCTV-12 社会与法",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 13,
+      "enabled": true,
+      "sources": [{"id": "cctv12-source", "url": "https://tv.cctv.com/live/cctv12/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv13",
+      "name": "CCTV-13 新闻",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 14,
+      "enabled": true,
+      "sources": [{"id": "cctv13-source", "url": "https://tv.cctv.com/live/cctv13/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctvchild",
+      "name": "CCTV-14 少儿",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 15,
+      "enabled": true,
+      "sources": [{"id": "cctvchild-source", "url": "https://tv.cctv.com/live/cctvchild/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv15",
+      "name": "CCTV-15 音乐",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 16,
+      "enabled": true,
+      "sources": [{"id": "cctv15-source", "url": "https://tv.cctv.com/live/cctv15/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv16",
+      "name": "CCTV-16 奥林匹克",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 17,
+      "enabled": true,
+      "sources": [{"id": "cctv16-source", "url": "https://tv.cctv.com/live/cctv16/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "cctv17",
+      "name": "CCTV-17 农业农村",
+      "logo": "",
+      "groupId": "cctv",
+      "order": 18,
+      "enabled": true,
+      "sources": [{"id": "cctv17-source", "url": "https://tv.cctv.com/live/cctv17/?return=true", "profileId": "cctv-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "beijing-satellite",
+      "name": "北京卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 0,
+      "enabled": true,
+      "sources": [{"id": "beijing-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002309", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "jiangsu-satellite",
+      "name": "江苏卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 1,
+      "enabled": true,
+      "sources": [{"id": "jiangsu-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002521", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "shanghai-satellite",
+      "name": "东方卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 2,
+      "enabled": true,
+      "sources": [{"id": "shanghai-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002483", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "zhejiang-satellite",
+      "name": "浙江卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 3,
+      "enabled": true,
+      "sources": [{"id": "zhejiang-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002520", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "hunan-satellite",
+      "name": "湖南卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 4,
+      "enabled": true,
+      "sources": [{"id": "hunan-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002475", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "hubei-ysp-satellite",
+      "name": "湖北卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 5,
+      "enabled": true,
+      "sources": [{"id": "hubei-ysp-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002508", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "guangdong-satellite",
+      "name": "广东卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 6,
+      "enabled": true,
+      "sources": [{"id": "guangdong-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002485", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "guangxi-ysp-satellite",
+      "name": "广西卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 7,
+      "enabled": true,
+      "sources": [{"id": "guangxi-ysp-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002509", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "heilongjiang-satellite",
+      "name": "黑龙江卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 8,
+      "enabled": true,
+      "sources": [{"id": "heilongjiang-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002498", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "hainan-satellite",
+      "name": "海南卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 9,
+      "enabled": true,
+      "sources": [{"id": "hainan-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002506", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "chongqing-satellite",
+      "name": "重庆卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 10,
+      "enabled": true,
+      "sources": [{"id": "chongqing-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002531", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "shenzhen-satellite",
+      "name": "深圳卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 11,
+      "enabled": true,
+      "sources": [{"id": "shenzhen-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002481", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "sichuan-satellite",
+      "name": "四川卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 12,
+      "enabled": true,
+      "sources": [{"id": "sichuan-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002516", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "henan-satellite",
+      "name": "河南卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 13,
+      "enabled": true,
+      "sources": [{"id": "henan-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002525", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "fujian-southeast-satellite",
+      "name": "福建东南卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 14,
+      "enabled": true,
+      "sources": [{"id": "fujian-southeast-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002484", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "guizhou-satellite",
+      "name": "贵州卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 15,
+      "enabled": true,
+      "sources": [{"id": "guizhou-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002490", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "jiangxi-ysp-satellite",
+      "name": "江西卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 16,
+      "enabled": true,
+      "sources": [{"id": "jiangxi-ysp-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002503", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "liaoning-satellite",
+      "name": "辽宁卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 17,
+      "enabled": true,
+      "sources": [{"id": "liaoning-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002505", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "anhui-ysp-satellite",
+      "name": "安徽卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 18,
+      "enabled": true,
+      "sources": [{"id": "anhui-ysp-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002532", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "hebei-satellite",
+      "name": "河北卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 19,
+      "enabled": true,
+      "sources": [{"id": "hebei-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002493", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "shandong-ysp-satellite",
+      "name": "山东卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 20,
+      "enabled": true,
+      "sources": [{"id": "shandong-ysp-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600002513", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "tianjin-satellite",
+      "name": "天津卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 21,
+      "enabled": true,
+      "sources": [{"id": "tianjin-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600152137", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "jilin-satellite",
+      "name": "吉林卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 22,
+      "enabled": true,
+      "sources": [{"id": "jilin-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600190405", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "shaanxi-satellite",
+      "name": "陕西卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 23,
+      "enabled": true,
+      "sources": [{"id": "shaanxi-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600190400", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "gansu-satellite",
+      "name": "甘肃卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 24,
+      "enabled": true,
+      "sources": [{"id": "gansu-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600190408", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "ningxia-satellite",
+      "name": "宁夏卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 25,
+      "enabled": true,
+      "sources": [{"id": "ningxia-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600190737", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "inner-mongolia-satellite",
+      "name": "内蒙古卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 26,
+      "enabled": true,
+      "sources": [{"id": "inner-mongolia-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600190401", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "yunnan-satellite",
+      "name": "云南卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 27,
+      "enabled": true,
+      "sources": [{"id": "yunnan-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600190402", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "shanxi-satellite",
+      "name": "山西卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 28,
+      "enabled": true,
+      "sources": [{"id": "shanxi-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600190407", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "qinghai-satellite",
+      "name": "青海卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 29,
+      "enabled": true,
+      "sources": [{"id": "qinghai-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600190406", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "tibet-satellite",
+      "name": "西藏卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 30,
+      "enabled": true,
+      "sources": [{"id": "tibet-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600190403", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "xinjiang-satellite",
+      "name": "新疆卫视",
+      "logo": "",
+      "groupId": "satellite",
+      "order": 31,
+      "enabled": true,
+      "sources": [{"id": "xinjiang-satellite-source", "url": "https://www.yangshipin.cn/tv/home?pid=600152138", "profileId": "yangshipin-live-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "shandong-satellite",
+      "name": "山东卫视",
+      "logo": "",
+      "groupId": "satellite-external",
+      "order": 0,
+      "enabled": true,
+      "sources": [{"id": "shandong-satellite-source", "url": "https://v.iqilu.com/live/sdtv/", "profileId": "iqilu-satellite-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "anhui-satellite",
+      "name": "安徽卫视",
+      "logo": "",
+      "groupId": "satellite-external",
+      "order": 1,
+      "enabled": true,
+      "sources": [{"id": "anhui-satellite-source", "url": "https://www.ahtv.cn/folder9000/folder20193?channelIndex=0", "profileId": "ahtv-satellite-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "southeast-satellite",
+      "name": "东南卫视",
+      "logo": "",
+      "groupId": "satellite-external",
+      "order": 2,
+      "enabled": true,
+      "sources": [{"id": "southeast-satellite-source", "url": "https://live.fjtv.net/setv/", "profileId": "fjtv-satellite-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "jiangxi-satellite",
+      "name": "江西卫视",
+      "logo": "",
+      "groupId": "satellite-external",
+      "order": 3,
+      "enabled": true,
+      "sources": [{"id": "jiangxi-satellite-source", "url": "https://www.jxntv.cn/live/", "profileId": "jxntv-satellite-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "hubei-satellite",
+      "name": "湖北卫视",
+      "logo": "",
+      "groupId": "satellite-external",
+      "order": 4,
+      "enabled": true,
+      "sources": [{"id": "hubei-satellite-source", "url": "https://news.hbtv.com.cn/app/tv/431", "profileId": "hbtv-satellite-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "guangxi-satellite",
+      "name": "广西卫视",
+      "logo": "",
+      "groupId": "satellite-external",
+      "order": 5,
+      "enabled": true,
+      "sources": [{"id": "guangxi-satellite-source", "url": "https://tv.gxtv.cn/channel/channelivePlay_e7a7ab7df9fe11e88bcfe41f13b60c62.html", "profileId": "gxtv-satellite-profile", "priority": 100, "timeoutMs": 20000, "enabled": true}]
+    },
+    {
+      "id": "local-demo",
+      "name": "本机测试页",
+      "logo": "",
+      "groupId": "test",
+      "order": 0,
+      "enabled": true,
+      "sources": [{"id": "local-demo-page", "url": "http://localhost:6688/demo", "profileId": "local-demo-profile", "priority": 100, "timeoutMs": 5000, "enabled": true}]
+    }
+  ],
+  "profiles": [
+    {
+      "id": "cctv-live-profile",
+      "name": "央视网直播规则",
+      "priority": 100,
+      "enabled": true,
+      "match": {
+        "hosts": ["tv.cctv.com"],
+        "includeSubdomains": false,
+        "pathRegex": "^/live/(?:index\\.shtml|m/|cctv[^/]+/?)"
+      },
+      "navigationAllowlist": ["tv.cctv.com", "cctv.com", "cntv.cn", "player.cntv.cn", "js.player.cntv.cn", "api.cntv.cn", "vdn.live.cntv.cn"],
+      "webView": {
+        "userAgentProfile": "desktop-chrome",
+        "customUserAgent": "",
+        "thirdPartyCookies": true,
+        "blockImages": false
+      },
+      "automation": {
+        "videoSelector": "#h5player_player, #player video, video",
+        "playButtonSelector": "#play_or_plause_player",
+        "hideSelectors": [".video_btnBar", ".video_right"]
+      },
+      "fullscreen": {
+        "strategies": [
+          {"type": "clickSelector", "selector": "#player_fullscreen_player"},
+          {"type": "clickSelector", "selector": "#player_pagefullscreen_player"},
+          {"type": "requestVideoFullscreen"},
+          {"type": "cssCinema"}
+        ]
+      },
+      "scriptRefs": ["cctv-player-bootstrap"]
+    },
+    {
+      "id": "yangshipin-live-profile",
+      "name": "央视频卫视直播规则",
+      "priority": 100,
+      "enabled": true,
+      "match": {
+        "hosts": ["www.yangshipin.cn"],
+        "includeSubdomains": false,
+        "pathRegex": "^/tv/home/?$"
+      },
+      "navigationAllowlist": ["www.yangshipin.cn", "yangshipin.cn"],
+      "webView": {
+        "userAgentProfile": "desktop-chrome",
+        "customUserAgent": "",
+        "thirdPartyCookies": true,
+        "blockImages": false
+      },
+      "automation": {
+        "videoSelector": "video.video-js",
+        "playButtonSelector": "",
+        "hideSelectors": []
+      },
+      "fullscreen": {
+        "strategies": [
+          {"type": "clickSelector", "selector": ".full.full2"},
+          {"type": "requestVideoFullscreen"},
+          {"type": "cssCinema"}
+        ]
+      },
+      "scriptRefs": ["yangshipin-player-bootstrap"]
+    },
+    {
+      "id": "iqilu-satellite-profile",
+      "name": "山东卫视直播规则",
+      "priority": 100,
+      "enabled": true,
+      "match": {
+        "hosts": ["v.iqilu.com"],
+        "includeSubdomains": false,
+        "pathRegex": "^/live/sdtv/?$"
+      },
+      "navigationAllowlist": ["v.iqilu.com", "iqilu.com"],
+      "webView": {
+        "userAgentProfile": "system",
+        "customUserAgent": "",
+        "thirdPartyCookies": true,
+        "blockImages": false
+      },
+      "automation": {
+        "videoSelector": "#player-id_html5_api, #player-id video, video",
+        "playButtonSelector": "#player-id .vjs-big-play-button",
+        "hideSelectors": []
+      },
+      "fullscreen": {
+        "strategies": [
+          {"type": "clickSelector", "selector": "#player-id .vjs-fullscreen-control"},
+          {"type": "requestVideoFullscreen"},
+          {"type": "cssCinema"}
+        ]
+      },
+      "scriptRefs": []
+    },
+    {
+      "id": "ahtv-satellite-profile",
+      "name": "安徽卫视直播规则",
+      "priority": 100,
+      "enabled": true,
+      "match": {
+        "hosts": ["www.ahtv.cn", "h5.ahtv.cn"],
+        "includeSubdomains": false,
+        "pathRegex": "^/folder9000/folder20193/?$"
+      },
+      "navigationAllowlist": ["www.ahtv.cn", "h5.ahtv.cn", "ahtv.cn"],
+      "webView": {
+        "userAgentProfile": "system",
+        "customUserAgent": "",
+        "thirdPartyCookies": true,
+        "blockImages": false
+      },
+      "automation": {
+        "videoSelector": "#playercontainer video",
+        "playButtonSelector": "#playercontainer .prism-play-btn",
+        "hideSelectors": []
+      },
+      "fullscreen": {
+        "strategies": [
+          {"type": "clickSelector", "selector": "#playercontainer .prism-fullscreen-btn"},
+          {"type": "requestVideoFullscreen"},
+          {"type": "cssCinema"}
+        ]
+      },
+      "scriptRefs": []
+    },
+    {
+      "id": "fjtv-satellite-profile",
+      "name": "东南卫视直播规则",
+      "priority": 100,
+      "enabled": true,
+      "match": {
+        "hosts": ["live.fjtv.net"],
+        "includeSubdomains": false,
+        "pathRegex": "^/setv/?$"
+      },
+      "navigationAllowlist": ["live.fjtv.net", "fjtv.net"],
+      "webView": {
+        "userAgentProfile": "system",
+        "customUserAgent": "",
+        "thirdPartyCookies": true,
+        "blockImages": false
+      },
+      "automation": {
+        "videoSelector": "#m2o_player video",
+        "playButtonSelector": "#m2o_player .prism-big-play-btn",
+        "hideSelectors": []
+      },
+      "fullscreen": {
+        "strategies": [
+          {"type": "clickSelector", "selector": "#m2o_player .prism-fullscreen-btn"},
+          {"type": "requestVideoFullscreen"},
+          {"type": "cssCinema"}
+        ]
+      },
+      "scriptRefs": []
+    },
+    {
+      "id": "jxntv-satellite-profile",
+      "name": "江西卫视直播规则",
+      "priority": 100,
+      "enabled": true,
+      "match": {
+        "hosts": ["www.jxntv.cn"],
+        "includeSubdomains": false,
+        "pathRegex": "^/live/?$"
+      },
+      "navigationAllowlist": ["www.jxntv.cn", "jxntv.cn"],
+      "webView": {
+        "userAgentProfile": "desktop-chrome",
+        "customUserAgent": "",
+        "thirdPartyCookies": true,
+        "blockImages": false
+      },
+      "automation": {
+        "videoSelector": "#liveplayer video",
+        "playButtonSelector": "#liveplayer .prism-big-play-btn",
+        "hideSelectors": []
+      },
+      "fullscreen": {
+        "strategies": [
+          {"type": "clickSelector", "selector": "#liveplayer .prism-fullscreen-btn"},
+          {"type": "requestVideoFullscreen"},
+          {"type": "cssCinema"}
+        ]
+      },
+      "scriptRefs": []
+    },
+    {
+      "id": "hbtv-satellite-profile",
+      "name": "湖北卫视直播规则",
+      "priority": 100,
+      "enabled": true,
+      "match": {
+        "hosts": ["news.hbtv.com.cn"],
+        "includeSubdomains": false,
+        "pathRegex": "^/app/tv/431/?$"
+      },
+      "navigationAllowlist": ["news.hbtv.com.cn", "hbtv.com.cn", "live21-cjy.hbtv.com.cn"],
+      "webView": {
+        "userAgentProfile": "desktop-chrome",
+        "customUserAgent": "",
+        "thirdPartyCookies": true,
+        "blockImages": false
+      },
+      "automation": {
+        "videoSelector": "#player-con video",
+        "playButtonSelector": "#player-con .prism-big-play-btn",
+        "hideSelectors": []
+      },
+      "fullscreen": {
+        "strategies": [
+          {"type": "clickSelector", "selector": "#player-con .prism-fullscreen-btn"},
+          {"type": "requestVideoFullscreen"},
+          {"type": "cssCinema"}
+        ]
+      },
+      "scriptRefs": []
+    },
+    {
+      "id": "gxtv-satellite-profile",
+      "name": "广西卫视直播规则",
+      "priority": 100,
+      "enabled": true,
+      "match": {
+        "hosts": ["tv.gxtv.cn"],
+        "includeSubdomains": false,
+        "pathRegex": "^/channel/channelivePlay_e7a7ab7df9fe11e88bcfe41f13b60c62\\.html$"
+      },
+      "navigationAllowlist": ["tv.gxtv.cn", "gxtv.cn"],
+      "webView": {
+        "userAgentProfile": "desktop-chrome",
+        "customUserAgent": "",
+        "thirdPartyCookies": true,
+        "blockImages": false
+      },
+      "automation": {
+        "videoSelector": "#player video",
+        "playButtonSelector": "#player .playback-layer, #player .xbtn-playback",
+        "hideSelectors": []
+      },
+      "fullscreen": {
+        "strategies": [
+          {"type": "clickSelector", "selector": "#player .xbtn-fullscreen"},
+          {"type": "requestVideoFullscreen"},
+          {"type": "cssCinema"}
+        ]
+      },
+      "scriptRefs": []
+    },
+    {
+      "id": "local-demo-profile",
+      "name": "本机测试规则",
+      "priority": 10,
+      "enabled": true,
+      "match": {
+        "hosts": ["localhost"],
+        "includeSubdomains": false,
+        "pathRegex": "^/demo(?:/|$)"
+      },
+      "navigationAllowlist": ["localhost"],
+      "webView": {
+        "userAgentProfile": "system",
+        "customUserAgent": "",
+        "thirdPartyCookies": false,
+        "blockImages": false
+      },
+      "automation": {
+        "videoSelector": "video",
+        "playButtonSelector": "",
+        "hideSelectors": []
+      },
+      "fullscreen": {
+        "strategies": [{"type": "requestVideoFullscreen"}, {"type": "cssCinema"}]
+      },
+      "scriptRefs": []
+    }
+  ],
+  "scripts": [
+    {
+      "id": "cctv-player-bootstrap",
+      "name": "央视动态播放器启动",
+      "enabled": true,
+      "body": "(function(){var n=0,t=setInterval(function(){var v=document.querySelector('#h5player_player')||document.querySelector('#player video');if(v){v.autoplay=true;var q=v.play();if(q&&q.catch)q.catch(function(){v.muted=true;v.play();});}if(++n>30)clearInterval(t);},500);})();"
+    },
+    {
+      "id": "yangshipin-player-bootstrap",
+      "name": "央视频卫视动态播放器启动",
+      "enabled": true,
+      "body": "(function(){var n=0,t=setInterval(function(){try{var v=document.querySelector('video.video-js')||document.querySelector('video');if(v){v.autoplay=true;v.playsInline=false;var p=v.play();if(p&&p.catch)p.catch(function(){v.muted=true;v.play();});var f=document.querySelector('.full.full2');if(f)try{f.click();}catch(e){}clearInterval(t);}if(++n>40)clearInterval(t);}catch(e){if(++n>40)clearInterval(t);}},500);})();"
+    }
+  ]
+}
